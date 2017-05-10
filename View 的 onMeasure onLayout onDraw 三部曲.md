@@ -103,7 +103,10 @@ public static int getChildMeasureSpec(int spec, int paddding, int childDimension
     int specMode = MeasureSpec.getMode(spec);
     int specSize = MeasureSpec.getSize(spec);
 
-  	// 父容器 能分配给 子 view 的 maxSize
+  	/**
+    * 父容器 能分配给 子 view 的 maxSize
+    * padding = 父容器的 padding + 子 view 的 margin
+    */
     int size = Math.max(0, specSize - paddding);
 
     int resultSize = 0;
